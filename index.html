@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swapna Mali | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #38bdf8;
+      --bg: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --text: #f8fafc;
+      --text-dim: #94a3b8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Segoe UI', sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.7; scroll-behavior: smooth; }
+
+    /* Navigation */
+    nav {
+      position: fixed; top: 0; width: 100%; padding: 20px 10%;
+      background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px);
+      display: flex; justify-content: space-between; z-index: 1000;
+    }
+    nav a { color: var(--text); text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+    nav a:hover { color: var(--primary); }
+
+    /* Hero Section */
+    header {
+      height: 100vh; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; text-align: center;
+      background: radial-gradient(circle at top right, #1e293b, #0f172a);
+    }
+    header h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: 15px; background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    header p { font-size: 1.2rem; color: var(--text-dim); margin-bottom: 30px; }
+
+    /* Glass Cards */
+    .glass-card {
+      background: var(--card-bg); backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px;
+      padding: 30px; transition: 0.4s ease;
+    }
+    .glass-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+
+    section { padding: 100px 10%; }
+    h2 { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+
+    /* Education Grid */
+    .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    
+    /* Projects Grid */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+
+    .btn {
+      padding: 12px 30px; background: var(--primary); color: #000;
+      text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s;
+    }
+    .btn:hover { box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
+
+    footer { text-align: center; padding: 40px; background: #020617; color: var(--text-dim); border-top: 1px solid #1e293b; }
+
+    @media(max-width: 768px) { section { padding: 60px 5%; } nav { display: none; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div style="font-weight: bold; color: var(--primary)">SM.</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Swapna Mali</h1>
+    <p>Computer Engineering Student • </p>
+    <a href="#projects" class="btn">Explore Projects</a>
+  </header>
+
+  <section id="about">
+    <h2>About My Journey</h2>
+    <div class="edu-grid">
+      <div class="glass-card">
+        <h3>Current Education</h3>
+        <p><strong>College:</strong> New Satara College of Engineering & Management (Poly), Korti</p>
+        <p><strong>Year:</strong> 1st Year, Computer Engineering</p>
+        <p><strong>First Sem:</strong> 81.41%</p>
+      </div>
+      <div class="glass-card">
+        <h3>Schooling</h3>
+        <p><strong>School:</strong> Shri Renuka Vidyalaya Babhulagoan</p>
+        <p><strong>10th Percentage:</strong> 77.60%</p>
+        <p><strong>Completed:</strong> 2024-25</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Work</h2>
+    <div class="projects">
+      <div class="glass-card">
+        <span style="color: var(--primary)">Web Development</span>
+        <h3 style="margin: 10px 0">College Website</h3>
+        <p>A comprehensive web platform for educational institutions.</p>
+      </div>
+      <div class="glass-card">
+        <span style="color: var(--primary)">Personal Branding</span>
+        <h3 style="margin: 10px 0">Portfolio Website</h3>
+        <p>Interactive professional site showcasing my engineering skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="text-align: center;">
+    <h2>Get In Touch</h2>
+    <div class="glass-card" style="max-width: 500px; margin: auto;">
+      <p>Email: <a href="mailto:swapnamali9209@email.com" style="color: var(--primary)">swapnamali9209@email.com</a></p>
+      <p>Location: At Post Babhulagoan</p>
+      <br>
+      <a href="mailto:swapnamali9209@email.com" class="btn">Send Message</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Swapna Mali. Built with passion for technology.</p>
+  </footer>
+
+</body>
+</html>
+
+
